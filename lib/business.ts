@@ -4,6 +4,11 @@ export const business = {
   phone: "0726 27 12 12",
   phoneHref: "tel:+40726271212",
   whatsapp: "https://wa.me/40726271212",
+  socials: {
+    facebook: "https://www.facebook.com/people/Expert-Conta-Sibiu/61566039016609/",
+    instagram: "https://www.instagram.com/expertcontasibiu/",
+    tiktok: "https://www.tiktok.com/@expert.conta.sibiu",
+  },
   email: "expertcontasibiu@gmail.com",
   emailAlt: "contact@expertcontasibiu.ro",
   address: "Str. Cornel Medrea, nr. 14, Șelimbăr",
@@ -12,7 +17,7 @@ export const business = {
   years: "11+",
   companies: "90+",
   logo: "https://expertcontasibiu.ro/wp-content/uploads/2025/04/logo-mic-png.png",
-  portrait: "https://expertcontasibiu.ro/wp-content/uploads/2025/04/P3230448-3.png",
+  portrait: "/georgiana-nistor.png",
 };
 
 export const services = [
