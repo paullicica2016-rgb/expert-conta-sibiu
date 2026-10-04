@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { business, services } from "@/lib/business";
 
 const nav = [["Acasă", "/"], ["Servicii", "/servicii"], ["Despre", "/despre"], ["Recenzii", "/#recenzii"], ["Întrebări", "/#intrebari"], ["Contact", "/contact"]];
@@ -46,6 +47,15 @@ function CookieBanner() { const [visible, setVisible] = useState(false); useEffe
 function GoogleMark() { return <span className="google-mark" aria-hidden="true">G</span>; }
 
 export function SitePage() {
+  const pathname = usePathname();
+  const pagePortraits: Record<string, string> = {
+    "/despre": "/georgiana-despre.jpg",
+    "/servicii": "/georgiana-in-birou.png",
+    "/contact": "/georgiana-contact.jpg",
+    "/contabilitate-sibiu": "/georgiana-documente.jpg",
+  };
+  const pagePortrait = pagePortraits[pathname] ?? business.portrait;
+
   useEffect(() => {
     const section = document.querySelector(".value");
     if (!section || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -72,7 +82,7 @@ export function SitePage() {
   }, []);
 
   return <><Header /><PersistentBrand /><main>
-  <section className="hero"><SocialLinks /><div className="hero-copy reveal"><p className="eyebrow">EXPERT CONTABIL CECCAR · SERVICII ÎN TOATĂ ROMÂNIA</p><h1>Contabilitatea firmei tale, <em>în mâini sigure.</em></h1><div className="mobile-portrait"><img src={business.portrait} alt="Georgiana Nistor, expert contabil CECCAR" /></div><p className="lead">Mai puțină grijă pentru acte. Mai mult timp pentru afacerea ta.</p><p className="hero-motto">„Cumpărați în câștig, vindeți în profit, dar niciodată pe 30 de arginți!”</p><p className="intro">Servicii contabile pentru firme din întreaga țară. Colaborăm simplu, inclusiv la distanță, cu soluții clare, comunicare directă și peste 11 ani de experiență.</p><div className="hero-actions"><WhatsApp>Discută pe WhatsApp</WhatsApp><a href="#evaluare" className="secondary">Evaluează-ți firma <span>→</span></a></div><div className="hero-proof"><span><b>{business.years}</b> ani experiență</span><span><b>{business.companies}</b> firme gestionate</span><span><b>CECCAR</b> expert contabil</span></div></div></section>
+  <section className="hero"><SocialLinks /><div className="hero-copy reveal"><p className="eyebrow">EXPERT CONTABIL CECCAR · SERVICII ÎN TOATĂ ROMÂNIA</p><h1>Contabilitatea firmei tale, <em>în mâini sigure.</em></h1><div className="mobile-portrait"><img src={pagePortrait} alt="Georgiana Nistor, expert contabil CECCAR" /></div><p className="lead">Mai puțină grijă pentru acte. Mai mult timp pentru afacerea ta.</p><p className="hero-motto">„Cumpărați în câștig, vindeți în profit, dar niciodată pe 30 de arginți!”</p><p className="intro">Servicii contabile pentru firme din întreaga țară. Colaborăm simplu, inclusiv la distanță, cu soluții clare, comunicare directă și peste 11 ani de experiență.</p><div className="hero-actions"><WhatsApp>Discută pe WhatsApp</WhatsApp><a href="#evaluare" className="secondary">Evaluează-ți firma <span>→</span></a></div><div className="hero-proof"><span><b>{business.years}</b> ani experiență</span><span><b>{business.companies}</b> firme gestionate</span><span><b>CECCAR</b> expert contabil</span></div></div></section>
   <section className="section value"><div className="section-title"><p className="eyebrow">CLARITATE PENTRU ANTREPRENORI</p><h2>Contabilitatea nu ar trebui să îți consume timpul.</h2><p>Ai nevoie de obligații respectate, răspunsuri clare și informații pe care să te poți baza.</p></div><div className="value-grid">{[["01", "Fără stres fiscal", "Respectarea obligațiilor fiscale și informare clară, la timp."], ["02", "Decizii mai bune", "Date financiare explicate într-un limbaj ușor de înțeles."], ["03", "Mai mult timp pentru afacere", "Documente și obligații gestionate fără să te pierzi în detalii."]].map(([n,t,d]) => <article key={n} className="value-card"><span>{n}</span><h3>{t}</h3><p>{d}</p></article>)}</div></section>
   <section className="section services" id="servicii"><div className="section-title split"><div><p className="eyebrow">CE FACEM</p><h2>Servicii complete pentru afacerea ta.</h2></div><p>Servicii contabile pentru firme din întreaga țară, adaptate volumului de lucru și specificului fiecărei activități.</p></div><div className="service-grid">{services.map(([t,d,id], i) => <article className="service-card" key={id}><span>0{i + 1}</span><h3>{t}</h3><p>{d}</p><a href={`/servicii#${id}`}>Află mai mult <b>→</b></a></article>)}</div><div className="service-details"><div className="service-details-heading"><p className="eyebrow">DETALII DESPRE SERVICII</p><h3>Cu ce te putem ajuta concret</h3></div>{services.map(([title, description, id, details], i) => <article className="service-detail" id={id} key={id}><span>0{i + 1}</span><div><h4>{title}</h4><p>{description}</p><ul>{details.map((item) => <li key={item}>{item}</li>)}</ul><WhatsApp message={`Bună ziua! Aș dori mai multe informații despre serviciul de ${title.toLowerCase()}.`}>Întreabă despre acest serviciu</WhatsApp></div></article>)}</div></section>
   <section className="about" id="despre"><div className="about-single-image"><img src="/georgiana-contact.jpg" alt="Georgiana Nistor, expert contabil CECCAR" /></div><div className="about-copy"><p className="eyebrow">DESPRE GEORGIANA</p><h2>Un partener pentru afacerea ta, nu doar un contabil.</h2><p>La Expert Conta Sibiu primești mai mult decât evidențe și declarații: primești un om care ascultă, explică și rămâne aproape de realitatea afacerii tale.</p><ul><li>Comunicare directă și atenție personală</li><li>Experiență de peste 11 ani</li><li>Calificare Expert Contabil CECCAR</li><li>Înțelegerea provocărilor antreprenoriale</li></ul><p className="signature">Georgiana Nistor</p><WhatsApp>Discută cu Georgiana</WhatsApp></div></section>
