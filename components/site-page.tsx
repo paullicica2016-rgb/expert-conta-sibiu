@@ -51,7 +51,7 @@ export function SitePage() {
   const pagePortraits: Record<string, string> = {
     "/despre": "/georgiana-despre.jpg",
     "/servicii": "/georgiana-in-birou.png",
-    "/contact": "/georgiana-contact.jpg",
+    "/contact": "/georgiana-colaborare.jpg",
     "/contabilitate-sibiu": "/georgiana-documente.jpg",
   };
   const pagePortrait = pagePortraits[pathname] ?? business.portrait;
