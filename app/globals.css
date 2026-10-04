@@ -31,7 +31,8 @@
   .hero{padding-top:96px;padding-bottom:30px;gap:14px}
   .hero h1{font-size:clamp(2.8rem,12vw,3.15rem);line-height:.96;margin-bottom:12px}
   .hero .mobile-portrait{height:clamp(155px,42vw,175px);margin:2px 0 13px}
-  .hero .mobile-portrait[data-page="/despre"] img{object-position:50% 17%}
+  .hero .mobile-portrait[data-page="/despre"]{height:auto;aspect-ratio:4/5;max-width:440px;margin:8px auto 20px}
+  .hero .mobile-portrait[data-page="/despre"] img{object-position:50% 45%}
   .hero .mobile-portrait[data-page="/servicii"] img{object-position:50% 17%}
   .hero .lead{font-size:1.2rem;line-height:1.2;margin-bottom:10px}
   .hero .intro{font-size:.91rem;line-height:1.45;margin-bottom:0}
