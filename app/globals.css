@@ -363,15 +363,14 @@ footer{padding-bottom:105px}
 .hero-motto{max-width:520px;margin:-2px 0 18px;padding:9px 0 9px 14px;border-left:2px solid var(--red);color:var(--red);font:italic 400 clamp(.92rem,1.25vw,1.08rem)/1.5 Georgia,'Times New Roman',serif}
 @media(max-width:780px){.hero-motto{margin:0 0 16px;padding:7px 0 7px 12px;font-size:.88rem}}
 
-.portrait-gallery{background:#f7f4ee}
-.portrait-gallery .section-title{max-width:1120px;margin:0 auto 34px}
-.portrait-gallery .section-title h2{max-width:620px;margin-bottom:0;font-size:clamp(2.6rem,4.5vw,4.4rem)}
-.portrait-gallery .section-title>p:last-child{max-width:350px;margin:0 0 4px;color:#5d676e}
-.portrait-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;max-width:1120px;margin:0 auto}
-.portrait-grid figure{min-width:0;margin:0;background:#fff;border:1px solid #ded9d1}
-.portrait-grid img{display:block;width:100%;height:clamp(200px,24vw,300px);object-fit:cover;object-position:center 36%}
-.portrait-grid figcaption{padding:13px 15px;color:#26323d;font:400 1.1rem/1.2 Georgia,serif}
-@media(max-width:780px){.portrait-gallery{padding:62px 22px}.portrait-gallery .section-title{margin-bottom:24px}.portrait-gallery .section-title h2{font-size:2.6rem}.portrait-gallery .section-title>p:last-child{margin-top:14px;font-size:.92rem}.portrait-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.portrait-grid img{height:clamp(175px,52vw,230px)}.portrait-grid figcaption{padding:10px 11px;font-size:.98rem}}
+.process-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(30px,6vw,80px);align-items:center;max-width:1120px;margin-inline:auto}
+.process-context-photo{margin:0;overflow:hidden;background:#ddd8d0}
+.process-context-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:62% 50%}
+.process-with-photo .timeline{grid-template-columns:1fr;gap:20px}
+.process-with-photo .timeline:before{left:14px;top:5px;bottom:5px;width:1px;height:auto}
+.process-with-photo .timeline article{padding:0 0 18px 48px}
+.process-with-photo .timeline article>span{left:0;top:0;padding:0 8px 0 0}
+@media(max-width:780px){.process-layout{grid-template-columns:1fr;gap:28px}.process-context-photo{grid-row:2;max-width:440px;width:100%;margin-inline:auto}.process-context-photo img{aspect-ratio:4/3}.process-with-photo .timeline{gap:14px}}
 
 .curated-reviews .section-title{margin-bottom:24px}
 /* Section links land below the fixed navigation, with stable photo dimensions. */
