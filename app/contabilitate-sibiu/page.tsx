@@ -1,2 +1,2 @@
-import { SitePage } from "@/components/site-page";
-export default function AccountingPage() { return <SitePage />; }
+import { redirect } from "next/navigation";
+export default function AccountingPage() { redirect("/#contabilitate"); }

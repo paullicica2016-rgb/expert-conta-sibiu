@@ -1,2 +1,2 @@
-import { SitePage } from "@/components/site-page";
-export default function FormationPage() { return <SitePage />; }
+import { redirect } from "next/navigation";
+export default function FormationPage() { redirect("/#infiintare-firme"); }

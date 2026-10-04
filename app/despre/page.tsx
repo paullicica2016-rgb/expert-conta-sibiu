@@ -1,2 +1,2 @@
-import { SitePage } from "@/components/site-page";
-export default function AboutPage() { return <SitePage />; }
+import { redirect } from "next/navigation";
+export default function AboutPage() { redirect("/#despre"); }

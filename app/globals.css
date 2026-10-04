@@ -31,9 +31,6 @@
   .hero{padding-top:96px;padding-bottom:30px;gap:14px}
   .hero h1{font-size:clamp(2.8rem,12vw,3.15rem);line-height:.96;margin-bottom:12px}
   .hero .mobile-portrait{height:clamp(155px,42vw,175px);margin:2px 0 13px}
-  .hero .mobile-portrait[data-page="/despre"]{height:auto;aspect-ratio:4/5;max-width:440px;margin:8px auto 20px}
-  .hero .mobile-portrait[data-page="/despre"] img{object-position:50% 45%}
-  .hero .mobile-portrait[data-page="/servicii"] img{object-position:50% 17%}
   .hero .lead{font-size:1.2rem;line-height:1.2;margin-bottom:10px}
   .hero .intro{font-size:.91rem;line-height:1.45;margin-bottom:0}
   .hero-actions{gap:10px;margin:17px 0 8px}
@@ -377,6 +374,31 @@ footer{padding-bottom:105px}
 @media(max-width:780px){.portrait-gallery{padding:62px 22px}.portrait-gallery .section-title{margin-bottom:24px}.portrait-gallery .section-title h2{font-size:2.6rem}.portrait-gallery .section-title>p:last-child{margin-top:14px;font-size:.92rem}.portrait-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.portrait-grid img{height:clamp(175px,52vw,230px)}.portrait-grid figcaption{padding:10px 11px;font-size:.98rem}}
 
 .curated-reviews .section-title{margin-bottom:24px}
+/* Section links land below the fixed navigation, with stable photo dimensions. */
+main section[id]{scroll-margin-top:96px}
+.services-intro{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(240px,.7fr);gap:clamp(30px,6vw,80px);align-items:center;margin-bottom:45px}
+.services-intro .section-title{margin:0}
+.services-photo{margin:0;overflow:hidden;background:#ddd8d0}
+.services-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:60% 25%}
+.about.about-section{grid-template-columns:minmax(0,.85fr) minmax(0,1fr);gap:36px clamp(30px,6vw,85px);min-height:0;padding:80px max(22px,9vw)}
+.about-heading{grid-column:1/-1;max-width:860px}
+.about-heading h2{margin-bottom:0}
+.about-section .about-single-image{min-height:0;aspect-ratio:4/5;max-width:440px;width:100%;align-self:start}
+.about-section .about-single-image img{height:100%;object-position:50% 45%;transform:none}
+.about-section .about-copy{padding:0;align-self:center;max-width:560px}
+.location-portrait{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;object-position:60% 40%;margin:0 0 28px}
+@media(max-width:780px){
+  main section[id]{scroll-margin-top:80px}
+  .services-intro{grid-template-columns:1fr;gap:22px;margin-bottom:28px}
+  .services-photo{max-width:440px;width:100%;margin-inline:auto}
+  .services-photo img{aspect-ratio:4/3;object-position:60% 25%}
+  .about.about-section{grid-template-columns:1fr;gap:25px;padding:48px 22px 58px}
+  .about-heading{grid-column:auto}
+  .about-heading h2{font-size:clamp(2.35rem,10vw,3rem)}
+  .about-section .about-single-image{margin-inline:auto}
+  .about-section .about-copy{padding:0}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .curated-reviews .section-title h2 em{font-style:normal;color:var(--red)}
 .curated-reviews .google-reviews-summary{flex-shrink:0}
 .review-summary-note{margin:0 0 38px;color:#657078;font-size:.78rem}

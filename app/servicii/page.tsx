@@ -1,3 +1,3 @@
-import { SitePage } from "@/components/site-page";
+import { redirect } from "next/navigation";
 
-export default function ServicesPage() { return <SitePage />; }
+export default function ServicesPage() { redirect("/#servicii"); }

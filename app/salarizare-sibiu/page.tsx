@@ -1,2 +1,2 @@
-import { SitePage } from "@/components/site-page";
-export default function PayrollPage() { return <SitePage />; }
+import { redirect } from "next/navigation";
+export default function PayrollPage() { redirect("/#salarizare-hr"); }

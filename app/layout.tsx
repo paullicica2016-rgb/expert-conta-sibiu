@@ -11,14 +11,14 @@ const structuredData = {
   address: { "@type": "PostalAddress", streetAddress: "Str. Cornel Medrea, nr. 14", addressLocality: "Șelimbăr", addressRegion: "Sibiu", addressCountry: "RO" },
   openingHours: "Mo-Fr 09:00-16:00",
   areaServed: "România",
-  url: "https://expert-conta-sibiu.fairy-pear-0325.chatgpt.site",
+  url: "https://expert-conta-sibiu.vercel.app",
 };
 
 export const metadata: Metadata = {
   title: "Expert Contabil Sibiu | Contabilitate, Fiscalitate & Salarizare",
   description: "Expert contabil CECCAR. Servicii contabile pentru firme din întreaga țară: contabilitate, consultanță fiscală și salarizare. Peste 11 ani de experiență.",
   keywords: ["expert contabil Sibiu", "contabil Sibiu", "contabilitate Sibiu", "servicii contabilitate Sibiu", "consultant fiscal Sibiu", "salarizare Sibiu"],
-  alternates: { canonical: "https://expert-conta-sibiu.fairy-pear-0325.chatgpt.site" },
+  alternates: { canonical: "https://expert-conta-sibiu.vercel.app" },
   openGraph: { title: "Expert Contabil Sibiu | Expert Conta Sibiu", description: "Contabilitate, fiscalitate și salarizare pentru firme din toată România.", locale: "ro_RO", type: "website" },
   icons: {
     icon: "/favicon.svg",

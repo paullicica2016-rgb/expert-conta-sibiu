@@ -1,2 +1,2 @@
-import { SitePage } from "@/components/site-page";
-export default function TaxPage() { return <SitePage />; }
+import { redirect } from "next/navigation";
+export default function TaxPage() { redirect("/#consultanta-fiscala"); }
