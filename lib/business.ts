@@ -17,7 +17,7 @@ export const business = {
   years: "11+",
   companies: "135+",
   logo: "https://expertcontasibiu.ro/wp-content/uploads/2025/04/logo-mic-png.png",
-  portrait: "/georgiana-nistor.png",
+  portrait: "/georgiana-nistor-135.png",
 };
 
 export const services = [
