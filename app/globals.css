@@ -422,3 +422,5 @@ main section[id]{scroll-margin-top:96px}
   .review-category .review-card{min-height:0;padding:21px;scroll-snap-align:start}
   .review-category .review-card p{font-size:1rem}
 }
+.persistent-brand,.mobile-actions{transition:transform .3s ease,opacity .3s ease,visibility .3s}
+.persistent-brand:not(.is-shown),.mobile-actions:not(.is-shown){transform:translateY(120%);opacity:0;visibility:hidden;pointer-events:none}
