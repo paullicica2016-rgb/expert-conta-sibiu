@@ -82,10 +82,20 @@ function GoogleMark() { return <span className="google-mark" aria-hidden="true">
 export function SitePage() {
   const [pastHero, setPastHero] = useState(false);
   useEffect(() => {
-    const onScroll = () => setPastHero(window.scrollY > 320);
+    const onScroll = () => {
+      const y = Math.max(window.scrollY || 0, window.pageYOffset || 0, document.documentElement.scrollTop || 0, document.body.scrollTop || 0);
+      setPastHero(y > 320);
+    };
     onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    const events = ["scroll", "touchmove", "touchend", "resize"] as const;
+    events.forEach((name) => window.addEventListener(name, onScroll, { passive: true }));
+    document.addEventListener("scroll", onScroll, { passive: true, capture: true });
+    const timer = window.setInterval(onScroll, 400);
+    return () => {
+      events.forEach((name) => window.removeEventListener(name, onScroll));
+      document.removeEventListener("scroll", onScroll, true);
+      window.clearInterval(timer);
+    };
   }, []);
 
   useEffect(() => {
