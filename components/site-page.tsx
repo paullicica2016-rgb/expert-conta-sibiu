@@ -39,8 +39,6 @@ const curatedReviewGroups = [
     ],
   },
 ];
-const evaluationFormUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdtJ4TOSXFAGuImk-ruanFKHsNy1pfQAsGV_ZCO33mMRvd0tA/viewform";
-const evaluationEmbedUrl = `${evaluationFormUrl}?embedded=true`;
 const mapEmbedUrl = "https://www.google.com/maps?q=Strada%20Cornel%20Medrea%2014%2C%20Selimbar%2C%20Romania&output=embed";
 const mapsUrl = "https://www.google.com/maps/search/?api=1&query=Strada+Cornel+Medrea+14%2C+Selimbar%2C+Romania";
 const faqs = [
@@ -73,7 +71,7 @@ function Header() {
 }
 
 function LeadQualifier() {
-  return <section className="qualifier" id="evaluare"><div className="qualifier-copy"><p className="eyebrow">FORMULAR DE EVALUARE</p><h2>Spune-ne câteva lucruri despre afacerea ta.</h2><p>Completează formularul și primim toate informațiile necesare pentru a pregăti o discuție utilă.</p><div className="progress"><span style={{ width: "100%" }} /></div><small>Răspunsurile ajung direct la Expert Conta Sibiu.</small></div><div className="question-card question-card-form"><iframe className="evaluation-iframe" title="Formular de evaluare a societății" src={evaluationEmbedUrl} loading="lazy">Se încarcă…</iframe></div></section>;
+  return <section className="qualifier" id="evaluare"><div className="qualifier-copy"><p className="eyebrow">FORMULAR DE EVALUARE</p><h2>Spune-ne câteva lucruri despre afacerea ta.</h2><p>Completează formularul și primim toate informațiile necesare pentru a pregăti o discuție utilă.</p><div className="progress"><span style={{ width: "100%" }} /></div><small>Răspunsurile ajung direct la Expert Conta Sibiu.</small></div><div className="question-card"><p className="question-number">01</p><h3>Începe evaluarea firmei tale.</h3><p className="form-card-copy">Îți ia doar câteva minute. Vei primi apoi o discuție adaptată nevoilor firmei tale.</p><a className="button continue" href="/evaluare" data-event="evaluation_form_click">Completează formularul <span aria-hidden>↗</span></a></div></section>;
 }
 
 function CookieBanner() { const [visible, setVisible] = useState(false); useEffect(() => setVisible(!localStorage.getItem("ecs-cookie")), []); if (!visible) return null; return <aside className="cookies" aria-label="Preferințe cookie"><strong>Preferințele tale contează</strong><p>Folosim cookie-uri necesare pentru funcționarea site-ului. Analiticele opționale rămân oprite până la acord.</p><div><button className="text-button" onClick={() => { localStorage.setItem("ecs-cookie", "necessary"); setVisible(false); }}>Doar necesare</button><button className="dark-button" onClick={() => { localStorage.setItem("ecs-cookie", "accepted"); setVisible(false); }}>Acceptă</button></div></aside> }
