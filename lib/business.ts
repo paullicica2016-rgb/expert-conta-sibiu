@@ -16,7 +16,7 @@ export const business = {
   hours: "Luni – Vineri · 09:00 – 16:00",
   years: "11+",
   companies: "135+",
-  logo: "https://expertcontasibiu.ro/wp-content/uploads/2025/04/logo-mic-png.png",
+  logo: "/logo.png",
   portrait: "/georgiana-nistor-135.png",
 };
 
