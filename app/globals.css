@@ -422,3 +422,7 @@ main section[id]{scroll-margin-top:96px}
   .review-category .review-card{min-height:0;padding:21px;scroll-snap-align:start}
   .review-category .review-card p{font-size:1rem}
 }
+
+.question-card-form{padding:0;overflow:hidden}
+.evaluation-iframe{display:block;width:100%;height:720px;border:0}
+@media(max-width:760px){.question-card-form{padding:0}.evaluation-iframe{height:640px}}
