@@ -99,7 +99,6 @@
 .value-card>span{display:grid;place-items:center;width:39px;height:39px;margin-bottom:30px;border-radius:50%;background:#f8e4e5;color:var(--red);font-size:.8rem;font-weight:800}
 .value-card h3{margin:0 0 10px;color:var(--ink);font-size:1.65rem}
 .value-card p{max-width:310px;margin:0;color:#66707b}
-.value-card:after{position:absolute;right:23px;bottom:17px;color:#c7c0b6;content:"↗";font-size:1.2rem;transition:color .2s,transform .2s}
 .value-card:hover:after{color:var(--red);transform:translate(2px,-2px)}
 .value.motion-ready .section-title,.value.motion-ready .value-card{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s cubic-bezier(.2,.75,.25,1),box-shadow .25s ease}
 .value.motion-ready .section-title.is-visible,.value.motion-ready .value-card.is-visible{opacity:1;transform:translateY(0)}

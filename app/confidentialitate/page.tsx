@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function ConfidentialitatePage() {
   return (
     <main className="privacy-page">
-      <a className="privacy-back" href="/">← Înapoi la pagina principală</a>
+      <a className="privacy-back" href="/">Înapoi la pagina principală</a>
       <p className="eyebrow">EXPERT CONTA SIBIU</p>
       <h1>Confidențialitate</h1>
       <p className="privacy-updated">Informații despre datele prelucrate prin acest site.</p>
